@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ patients = [
 
 @app.route('/')
 def home():
-    return "<h1>Healthcare Organization Patient Portal</h1><p>Welcome to our secure medical record system.</p>"
+    return render_template('index.html')
 
 @app.route('/api/patients', methods=['GET'])
 def get_patients():
