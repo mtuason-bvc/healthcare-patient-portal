@@ -5,6 +5,7 @@ pipeline {
         IMAGE_NAME = 'healthcare-app'
         CONTAINER_NAME = 'healthcare-web'
         PORT = '8080'
+        DOCKER_TLS_VERIFY = '0'
     }
 
     stages {
